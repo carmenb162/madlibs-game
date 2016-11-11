@@ -1,11 +1,25 @@
 
 <br>
-work please
-<%= @verb1 %>
+if I can read this, then the page is at least loading from file finished_story.html.erb
 <br>
-"@verb1 in quotes"
 <br>
-"#{@verb1} attempt at str. interp."
+<br>
+Hm.  Can embedded Ruby work w/ an instance variable named within the controller? <%= @verb1 %>
+<br>
+Hm.  What about that same instance variable, in quotes?  "@verb1 in quotes"
+<br>
+Hm.  What about using string interpolation w/ that instance variable? "#{@verb1} attempt at str. interp."
+<br>
+Hm. What about embedded ruby, and we call the field w/ all the
+text and string interpolation using the params?  <%= Theme.find(1) %>
+<br>
+maybe if we call the params as we did w/ the API?  params[:noun1]
+<br>
+or string interpolate w/ that, instead of calling through the theme?  "try this! #{params[:noun1]}"
+<br>
+or maybe embedded Ruby w/ the params?  <%= params[:noun1] %>
+
+
 <!-- “I #{params[:verb1]} on I-95 every day for my commute, and today traffic is #{params[:adjective1]} .  I am not surprised, because this, after all, Florida, home of accidents on the #{params[:adjective2]} side of the #{params[:noun1]} and we are still stopped.
 
 Auston will be #{params[:adjective3]} because I won’t be in class, coding away in my favorite #{params[:noun2]}, Ruby.  If only it were Friday and we had a Retro, I could look forward to #{params[:noun3]}, but now I won’t even get to see Gabe and his #{params[:adjective4]} morning face. With traffic moving this #{params[:adparams[:verb1]]}, it would be faster to take a #{params[:noun4]} to class.” -->

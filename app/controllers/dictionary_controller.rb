@@ -32,6 +32,7 @@ class DictionaryController < ApplicationController
       redirect_to finished_story_url
       @verb1 = params[:verb1]
     end
+  end
 
 
 
@@ -50,5 +51,3 @@ class DictionaryController < ApplicationController
 
 
   end
-
-end
