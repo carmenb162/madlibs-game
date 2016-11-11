@@ -1,0 +1,58 @@
+<h1>Fill in the blanks for your Mad Floridian game!</h1>
+
+<br>
+<%= form_tag(controller: "dictionary", action:"submit_ten_words", method: "post") do %>
+
+  <ul>
+    <li>
+  <label for = "verb1" > Gimme a verb! </label>
+  <input name="verb1" type="text" autofocus="true">
+    </li>
+
+    <li>
+  <label for = "noun1" > Gimme a noun! </label>
+  <input name="noun1" type="text">
+    </li>
+
+    <li>
+  <label for = "adjective1" > An adjective is nice... </label>
+  <input name="adjective1" type="text">
+    </li>
+
+    <li>
+  <label for = "noun2" > Another noun! </label>
+  <input name="noun2" type="text">
+    </li>
+
+    <li>
+  <label for = "adjective2" > Now another adjective, keep on describing! </label>
+  <input name="adjective2" type="text">
+    </li>
+
+    <li>
+  <label for = "adverb1" > How about an adverb?  Remember adverbs describe verbs and adjectives... </label>
+  <input name="adverb1" type="text">
+    </li>
+
+    <li>
+  <label for = "noun3" > A third noun... </label>
+  <input name="noun3" type="text">
+    </li>
+
+    <li>
+  <label for = "adjective3" > ADJECTIVE! </label>
+  <input name="adjective3" type="text">
+    </li>
+
+    <li>
+  <label for = "noun4" > LAST noun! </label>
+  <input name="noun4" type="text">
+    </li>
+
+    <li>
+  <label for = "adjective4" > (again) ADJECTIVE! </label>
+  <input name="adjective4" type="text">
+    </li>
+
+    <input type='submit'>
+<% end %>

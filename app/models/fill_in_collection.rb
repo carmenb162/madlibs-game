@@ -1,0 +1,2 @@
+class FillInCollection < ApplicationRecord
+end
