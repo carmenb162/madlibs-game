@@ -49,7 +49,7 @@ class DictionaryController < ApplicationController
         # completed view... instead, we want to keep the user at the page and have them
         # provide a word of the correct part of speech
 
-    #render "default/home"
+    # render "default/home"
           #The render code above works, but it clears all the previous input in the fields.
           #Annoying and can't figure out how to prevent that...  So, tried to use the flash.now thing below...
 
