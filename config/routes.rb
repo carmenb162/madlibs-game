@@ -9,6 +9,4 @@ Rails.application.routes.draw do
   # get 'finished_story' =>'default#finished_story'
 
 
-
-
 end
