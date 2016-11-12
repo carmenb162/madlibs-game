@@ -1,5 +1,10 @@
 <h1>Fill in the blanks for your Mad Floridian game!</h1>
 
+<% if flash[:notice] %>
+  <div class='notice'><%= flash[:notice] %></div>
+  <div> hey i'm here </div>
+<% end %>
+
 <br>
 <%= form_tag( method: "post", controller: "dictionary", action:"submit_ten_wordsies") do %>
 

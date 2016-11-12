@@ -57,12 +57,14 @@ class DictionaryController < ApplicationController
           # if the array @testing contains a single instance of the word "false," we don't want to move to the
           # completed view... instead, we want to keep the user at the page and have them
           # provide a word of the correct part of speech
-          render "default/home"
               #The render code above works, but it clears all the previous input in the fields.
               #Annoying and can't figure out how to prevent that...  So, tried to use the flash.now thing below...
-        # flash.now[:notice] = 'One of your words is the wrong part of speech!'
-            # This triggers, but it doesn't display a message box...  It just makes
-            # the browser window go blank.  :(  Still need.
+          flash.now[:notice] = 'One or more of your words is the wrong part of speech!'
+            # This triggers, a message box
+          render "default/home"
+            # This keeps user @ the home page if they have a wrong part of speech.  Render vs. redirect
+            # because otherwise the user would lose their values and have to start from zero
+
         else
           render "default/finished_story"
             # This works!  takes user to the finished_story page and uses string interpolation to enter in the
