@@ -4,11 +4,10 @@ Rails.application.routes.draw do
 
   get 'home' => 'default#home'
 
-  get 'finished_story' =>'default#finished_story'
-
-  # post 'home' => 'dictionary#submit_ten_words'
-
   post 'submit_ten_words' => 'dictionary#submit_ten_wordsies'
+
+  # get 'finished_story' =>'default#finished_story'
+
 
 
 
