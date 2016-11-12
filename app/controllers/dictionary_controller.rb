@@ -35,7 +35,8 @@ class DictionaryController < ApplicationController
         filtered_results = api_response.map do |datum|
           datum['partOfSpeech']
             # get the part of speech from the API response for the given word
-        end
+        end #ends do for API check
+
         t = filtered_results.uniq.map do |attr|
             # define variable t as a map method in which we take only the unique
             # instances of part of speech from that API response
@@ -51,7 +52,7 @@ class DictionaryController < ApplicationController
                 # if that string's length is > 0, that means that there is a definition of the user's
                 # provided word -- meaning, the user provided a real word.
                 # then, shove value into array @testing
-        end
+        end  #ends t= filtered_results.uniq.map do
 
         if @testing.include? false
           # if the array @testing contains a single instance of the word "false," we don't want to move to the
@@ -69,10 +70,10 @@ class DictionaryController < ApplicationController
           render "default/finished_story"
             # This works!  takes user to the finished_story page and uses string interpolation to enter in the
             # 10 words provided by the user
-        end
-
-      end
-    # else
-    #   render "tests/plan_b_happened"
-    end
-  end
+        end  # ends if @testing.include? false
+      else
+        flash.now[:notice] = "Looks like you haven't specified all 10 words"
+        render "default/home"
+      end    # ends the if statement     if empty_params.length == 0
+    end  # end the method
+  end  # end of class
