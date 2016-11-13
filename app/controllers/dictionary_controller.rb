@@ -60,7 +60,7 @@ class DictionaryController < ApplicationController
           # provide a word of the correct part of speech
               #The render code above works, but it clears all the previous input in the fields.
               #Annoying and can't figure out how to prevent that...  So, tried to use the flash.now thing below...
-          flash.now[:notice] = 'One or more of your words is the wrong part of speech!'
+          flash.now[:notice] = 'Hm...  Looks like you gave the wrong part of speech for one or more words...  Fix it and try again!'
             # This triggers, a message box
           render "default/home"
             # This keeps user @ the home page if they have a wrong part of speech.  Render vs. redirect
@@ -72,7 +72,7 @@ class DictionaryController < ApplicationController
             # 10 words provided by the user
         end  # ends if @testing.include? false
       else
-        flash.now[:notice] = "Looks like you haven't specified all 10 words"
+        flash.now[:notice] = "Looks like you haven't specified all 10 words!  Fill in all the blanks and try again!"
         render "default/home"
       end    # ends the if statement     if empty_params.length == 0
     end  # end the method
