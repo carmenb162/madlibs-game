@@ -53,8 +53,10 @@
 
 	<section class="intro" id="zen-intro">
 		<header role="banner">
-			<h1>CSS Zen Garden</h1>
-			<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+			<a href="#middle-pane" type=button>
+				<h1>blah</h1>
+				<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+			</a>
 		</header>
 
 		<div class="summary" id="zen-summary" role="article">
@@ -110,7 +112,7 @@
 
 
 	<aside class="sidebar" role="complementary">
-		<div class="wrapper">
+		<div class="wrapper" id="middle-pane">
 
 			<div class="design-selection" id="design-selection">
 				<h3 class="select">Fill in the blanks for your Mad Floridian game!</h3>
@@ -124,7 +126,7 @@
 <%= form_tag( method: "post", controller: "dictionary", action:"submit_ten_wordsies") do %>
 
 					<li>
-						<a class="design-name"><label for = "verb1" > Gimme a verb! </label></a> by						<a class="designer-name"><input name="verb1" type="text" autofocus="true" value=<%= params[:verb1]%>></a>
+						<a class="design-name"><label for = "verb1" > Gimme a verb! </label></a> by						<a class="designer-name"><input name="verb1" type="text" value=<%= params[:verb1]%>></a>
 					</li>
         <li>
 						<a class="design-name"><label for = "noun1" > Gimme a noun! </label></a> by						<a class="designer-name"><input name="noun1" type="text" value=<%= params[:noun1]%>></a>

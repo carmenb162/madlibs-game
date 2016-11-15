@@ -72,8 +72,9 @@ class DictionaryController < ApplicationController
             # 10 words provided by the user
         end  # ends if @testing.include? false
       else
-        flash.now[:notice] = "Looks like you haven't specified all 10 words!  Fill in all the blanks and try again!"
-        render "default/home"
+        # flash.now[:notice] = "Looks like you haven't specified all 10 words!  Fill in all the blanks and try again!"
+        # render "default/home"
+        render :js => "alert('Hello Rails');"
       end    # ends the if statement     if empty_params.length == 0
     end  # end the method
   end  # end of class

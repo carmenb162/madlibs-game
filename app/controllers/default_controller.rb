@@ -3,6 +3,8 @@ class DefaultController < ApplicationController
   def home
   end
 
+
+
   # def finished_story
   #   @params = params
   #   # @something = params[:noun1]
